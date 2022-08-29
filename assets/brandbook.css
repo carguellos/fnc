@@ -1,34 +1,44 @@
+:root{
+    --primary: #2B4865;
+    --secondary: #256D85;
+    --accent: #8FE3CF;
+    --text-color: #555;
+    --bg-gray: #f4f5f6;
+    --border-color: #bdbdbd;
+}
+
+
 html{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 /* --- Contenido */
 h1, .h1{
     font-size: 32px;
-    color: darkblue;
+    color: var(--secondary);
     font-weight: bold;
 }
 
 h2, .h2{
     font-size:27px;
-    color: grey;
+    color: var(--secondary);
     font-weight: bold;
 }
 
 p, .p, li{
     font-size: 18px;
-    color: #555;
+    color: var(--text-color);
     line-height: 1.4;
 }
 
 a{
     font-size: 17px;
-    color: teal;
+    color: var(--accent);
     text-decoration: none;
 }
 
 button{
-    background-color: teal;
+    background-color: var(--accent);
     color: white;
     font-size:20px;
     font-weight: bold;
