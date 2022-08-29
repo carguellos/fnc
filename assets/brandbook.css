@@ -1,0 +1,35 @@
+html{
+    font-family: 'Lato', sans-serif;
+}
+
+/* --- Contenido */
+h1, .h1{
+    font-size: 32px;
+    color: darkblue;
+    font-weight: bold;
+}
+
+h2, .h2{
+    font-size:27px;
+    color: grey;
+    font-weight: bold;
+}
+
+p, .p, li{
+    font-size: 18px;
+    color: #555;
+    line-height: 1.4;
+}
+
+a{
+    font-size: 17px;
+    color: teal;
+    text-decoration: none;
+}
+
+button{
+    background-color: teal;
+    color: white;
+    font-size:20px;
+    font-weight: bold;
+}
