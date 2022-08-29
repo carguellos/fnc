@@ -1,11 +1,4 @@
 
-body{
-    font-family: 'Inter', sans-serif;
-    width:100%;
-    background: #ffffff;
-}
-
-
 section{
     width:100%;
 }
@@ -43,21 +36,6 @@ input[type=search]{
 
 .cover-content{
     margin-top: 150px;
-}
-
-
-/* Typhography */
-h1{
-    font-size: 24px;
-    color: #009688;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-p{
-    font-size:17px;
-    color:#5d5d5d;
-    font-weight:400;
 }
 
 .blueprint{
