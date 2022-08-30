@@ -56,3 +56,11 @@ button{
 .primary{
     color: var(--primary);
 }
+
+.bg-primary{
+    background-color: var(--primary);
+}
+
+.secondary{
+    color: var(--secondary);
+}
