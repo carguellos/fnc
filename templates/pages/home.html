@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+
+{% macro productPreview(item) %}
+    <div class="productPreview">
+            <img src="https://img.freepik.com/free-photo/living-room-with-green-sofa-empty-white-wall-background_41470-4950.jpg?w=740&t=st=1661819667~exp=1661820267~hmac=e94a204ef8d444a7cbf7801015b20893fbaac0369d93193dbe80651ef9df475b">
+            <div class="px-2">
+                <h5>{{ item.title }}</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                <div class="d-flex justify-content-between">
+                    <p class="price">{{ item.price }}</p>
+                    <div class="add-to-cart">
+                        <span class="material-symbols-outlined">
+                            add_shopping_cart
+                            </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endmacro %}
+
+
+
+{% block main %}
+
+{{ pagina }}
+
+<section class="home-1 border-bottom">
+    <div class="gridCover">
+        <div>
+            <div class="cover-content px-4">
+                <h1>Tienda de Diseño Ecom<span class="dot">.</span></h1>
+                <p>La mayor variedad para el espacio armónico en tu hogar</p>
+                <a href="/" class="btn btn-outline-dark">Comprar ahora</a>
+                </div>
+        </div>
+        <div>
+            <img class="home-banner" src="/static/images/banner-principal.jpeg" alt="Banner principal">
+        </div>
+
+    </div>
+</section>
+<section class="home-2 py-5">
+<div class="container-fluid px-5">
+    <h2 class="text-center mb-4">Últimos productos disponibles<span class="dot">.</span></h2>
+    <div class="gridProductos">
+        {% for item in pagina.productos %}
+            {{ productPreview(item)}}
+        {% endfor %}
+    </div>
+</div>
+</section>
+
+{% endblock %}
