@@ -35,6 +35,11 @@ def catalogo():
     return render_template('pages/catalogo.html')
 
 
+@app.route('/checkout')
+def checkout():
+    return render_template('pages/checkout.html')
+
+
 
 
 

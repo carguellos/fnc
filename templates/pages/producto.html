@@ -3,7 +3,54 @@
 
 
 {% block main %}
+<section class="py-5">
+    <div class="container-fluid px-5">
+        <div class="row">
+            <div class="col-6">
+                <img class="w-100" src="https://img.freepik.com/free-photo/living-room-interior-wall-warm-tones-gray-armchair-with-wood-cabinet-3d-rendering_41470-3656.jpg?w=740&t=st=1661819722~exp=1661820322~hmac=8b78c7ef5e8d47ceaf0cbbd4a30cdf1e2835a9a9b2472a5b7d38172bb97054a7" alt="">
+            </div>
+            <div class="col-6">
+                <h1>Silla Nordik Design</h1>
+                <h3 class="mt-4">$900.000</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                <div class="d-flex mt-5 align-items-center">
+                    <p class="mb-0 me-3">Chose a color:</p>
+                    <div class="color" style="background: #d6ccc2;"></div>
+                    <div class="color" style="background: #8ecae6;"></div>
+                    <div class="color" style="background: #edede9"></div>
+                </div> 
+                <div class="mt-5">
+                    <div class="row">
+                        <div class="col-3">
+                            <select class="form-control">
+                                <option selected hidden>Tamaño</option>
+                                <option value="s">Small</option>
+                                <option value="s">Medium</option>
+                                <option value="s">Large</option>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <select class="form-control">
+                                <option selected hidden>Cantidad</option>
+                                <option value="s">1</option>
+                                <option value="s">2</option>
+                                <option value="s">3</option>
+                                <option value="s">4</option>
+                                <option value="s">5</option>
+                                <option value="s">6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <div class="btn btn-outline-dark">Agregar a mi compra</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <h1>Producto</h1>
+{% include "partials/ficha-tecnica.html" %}
 
 {% endblock %}
