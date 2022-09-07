@@ -108,3 +108,17 @@ border: 1px solid blue;
     background: red;
     cursor: pointer;
 }
+
+
+.checkout-steps small{
+    background-color: var(--bg-gray);
+    padding:.5rem 1rem;
+    border:1px solid #bdbdbd;
+    border-radius:2rem;
+}
+
+.grid-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:1.5rem
+}

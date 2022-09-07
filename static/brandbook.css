@@ -42,6 +42,20 @@ a{
     text-decoration: none;
 }
 
+legend{
+    font-size:17px;
+    color: var(--secondary);
+    border-bottom:1px solid #bdbdbd;
+}
+
+label{
+    font-weight: 600;
+}
+
+.form-control{
+    background-color: var(--bg-gray);
+}
+
 button{
     background-color: var(--accent);
     color: white;
