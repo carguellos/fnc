@@ -1,0 +1,98 @@
+<h3 class="mb-4">Checkout</h3>
+<div style="max-width: 300px" class="checkout-steps d-flex justify-content-between">
+    <small><b>Dirección</b></small>
+    <small>Envío</small>
+    <small>Pago</small>
+</div>
+<form class="mt-5" action="" method="post">
+    <h4>Información de envío</h4>
+    <fieldset>
+        <legend>Datos personales</legend>
+        <div class="py-4">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" class="form-control mb-3"  placeholder="Ingrese su nombre y apellido">
+        
+        <label>Email:</label>
+        <input type="email" name="email" class="form-control mb-3"  placeholder="Ingrese su correo electrónico" required>
+
+        <div class="row">
+            <div class="col-6">
+                <label>Tipo de documento:</label>
+                <select name="tipo-documento" class="form-control form-select">
+                    <option selected hidden>Seleccione un valor</option>
+                    <option value="cc">Cédula de ciudadanía</option>
+                    <option value="ce">Cédula de extranjería</option>
+                    <option value="pass">Pasaporte</option>
+                </select>
+
+
+            </div>
+            <div class="col-6">
+                <label>Documento:</label>
+                <input type="text" name="doc" class="form-control mb-3"  placeholder="Ingrese su documento">
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div>
+                <label>Fecha de nacimiento:</label>
+                <input type="date" name="birth" class="form-control mb-3"  placeholder="Ingrese su documento">
+            </div>
+            <div>
+                <label>Teléfono:</label>
+                <input type="text" name="tel" class="form-control mb-3"  placeholder="Ingrese su teléfono">
+            </div>
+        </div>
+
+        <p>¿Cuál es tu género?</p>
+        <div class="d-flex">
+            <label for="gen-1" class="me-4">
+                <input id="gen-1" name="genero" value="m" type="radio">
+                Mujer
+            </label>
+    
+            <label for="gen-2">
+                <input id="gen-2" name="genero" value="h" type="radio">
+                Hombre
+            </label>
+        </div>
+        <br>
+    
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="terms" id="terms">
+            <label class="form-check-label" for="terms">
+                Acepto términos y condiciones de la plataforma
+            </label>
+          </div>
+
+          <br>
+          <label>Contraseña:</label>
+          <input type="password"  name="password" class="form-control" placeholder="Ingrese su contraseña">
+
+    </div>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Dirección</legend>
+        
+       
+
+
+    </fieldset>
+    <fieldset>
+        <legend>Información adicional</legend>
+
+        <label>Foto:</label>
+        <input class="form-control form-control-lg" type="file" name="foto">
+
+
+
+
+    </fieldset>
+
+    <button  class="btn btn-primary" type="submit">Comprar</button>
+
+</form>
+
+
