@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
@@ -40,8 +40,12 @@ def checkout():
     return render_template('pages/checkout.html')
 
 
-
-
+@app.post('/checkout')
+def form_post():
+    form = request.form
+    return jsonify({
+        'form': form.to_dict()
+    })
 
 
 if __name__ == '__main__':
