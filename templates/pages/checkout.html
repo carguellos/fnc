@@ -2,14 +2,13 @@
 
 
 {% block main %}
-    <section class="py-4">
-        <div class="px-5">
-            <div class="row">
-                <div class="col-6 pe-5">
-                    {% include "partials/formulario-checkout.html" %} 
-                    {# {% include "partials/form-accordion.html" %} #}
+    <section class="py-3 py-md-4">
+        <div class="px-3 px-md-5">
+            <div class="gridCheckout">
+                <div class="area-form">
+                    {% include "partials/formulario-checkout.html" %}
                 </div>
-                <div class="col-6 ps-5">
+                <div class="area-cart">
                     {% include "partials/carrito.html" %}
                 </div>
             </div>

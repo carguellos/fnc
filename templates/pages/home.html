@@ -6,21 +6,21 @@
 {% block main %}
 <section class="home-1 border-bottom">
     <div class="gridCover">
-        <div>
+        <div class="area-content">
             <div class="cover-content px-4">
                 <h1>Tienda de Diseño Ecom<span class="dot">.</span></h1>
                 <p>La mayor variedad para el espacio armónico en tu hogar</p>
                 <a href="/" class="btn btn-outline-dark">Comprar ahora</a>
                 </div>
         </div>
-        <div>
+        <div class="area-image">
             <img class="home-banner" src="/static/images/banner-principal.jpeg" alt="Banner principal">
         </div>
 
     </div>
 </section>
-<section class="home-2 py-5">
-<div class="container-fluid px-5">
+<section class="home-2 py-4 py-md-5">
+<div class="container-fluid px-3 px-md-5">
     <h2 class="text-center mb-4">Últimos productos disponibles<span class="dot">.</span></h2>
     <div class="gridProductos">
         {% for item in pagina.productos %}

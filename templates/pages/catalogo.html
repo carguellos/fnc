@@ -3,21 +3,24 @@
 
 
 {% block main %}
-    <section class="py-5">
-        <div class="px-5">
+    <section class="py-4 py-md-5">
+        <div class="px-3 px-md-5">
             <div class="gridCatalog">
                 <div>
-                    <h2>Filtros</h2>
-                    <p><b>Categorías</b></p>
+                    <div class="filtros">
+                        <h2>Filtros</h2>
+                        <p><b>Categorías</b></p>
 
-                    {% for item in categories %}
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="{{ item.slug }}" id="category-{{ item.slug }}">
-                            <label class="form-check-label" for="category-{{ item.slug }}">
-                               {{ item.label }}
-                            </label>
-                        </div>
-                    {% endfor %}
+                        {% for item in categories %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="{{ item.slug }}"
+                                       id="category-{{ item.slug }}">
+                                <label class="form-check-label" for="category-{{ item.slug }}">
+                                    {{ item.label }}
+                                </label>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
                 <div>
                     <div class="gridProductos">
