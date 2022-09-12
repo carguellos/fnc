@@ -1,29 +1,22 @@
-from flask import Flask, render_template, request, jsonify
+import os
+
+from flask import Flask, render_template, request, jsonify, json
 
 app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
+SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+
 
 @app.route('/')
 def home():
+    data = json.load(open(os.path.join(SITE_ROOT, "static/content", "catalog.json")))
     return render_template('pages/home.html',
-        pagina={
-            "productos": [
-                    {
-                        "title":"Silla Nordik",
-                        "price":"$90.000"
-                    },
-                    {
-                        "title":"Silla Nordik",
-                        "price":"$110.000"
-                    },
-                    {
-                        "title":"Silla Nordik",
-                        "price":"$120.000"
-                    }
-            ]
-        }
-    )
+                           pagina={
+                               "productos": data[:4]
+                           }
+                           )
+
 
 @app.route('/producto')
 def producto():
@@ -32,7 +25,18 @@ def producto():
 
 @app.route('/catalogo')
 def catalogo():
-    return render_template('pages/catalogo.html')
+    data = json.load(open(os.path.join(SITE_ROOT, "static/content", "catalog.json")))
+    return render_template(
+        'pages/catalogo.html',
+        products=data,
+        categories=[
+            {"label": "Sillas", "slug": "sillas"},
+            {"label": "Sofás", "slug": "sofas"},
+            {"label": "Futones", "slug": "futones"},
+            {"label": "Comedores", "slug": "comedores"},
+            {"label": "Alcoba", "slug": "alcoba"}
+        ]
+    )
 
 
 @app.route('/checkout')

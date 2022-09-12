@@ -122,3 +122,14 @@ border: 1px solid blue;
     grid-template-columns: 1fr 1fr;
     grid-gap:1.5rem
 }
+
+.gridCatalog{
+    display: grid;
+    grid-template-columns: .5fr 3fr;
+    grid-gap:2rem;
+}
+
+.gridCatalog .gridProductos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
