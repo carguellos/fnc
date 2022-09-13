@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-12 col-md-3 d-flex align-items-center">
-                <span class="material-symbols-outlined primary">
+                <span onclick="toggleMenu()" style="cursor: pointer" class="material-symbols-outlined primary">
                     menu
                     </span>
                 <a href="/">
@@ -30,3 +30,26 @@
         </div>
     </div>
 </header>
+<aside id="menu-lateral" class="menu-lateral p-4">
+    <div class="py-3 d-flex">
+        <span class="material-symbols-outlined secondary mr-4">shopping_bag</span>
+        <a class="primary" href="/catalogo">Catálogo</a>
+    </div>
+    <div class="py-3">
+        <span class="material-symbols-outlined secondary mr-4">shopping_bag</span>
+        <a class="primary" href="/producto">Producto</a>
+    </div>
+    <div class="py-3">
+        <span class="material-symbols-outlined secondary mr-4">shopping_bag</span>
+        <a class="primary" href="/">Login</a>
+    </div>
+</aside>
+<div id="menu-overlay" class="menu-overlay" style="cursor:pointer;" onclick="toggleMenu()"></div>
+
+<script>
+    function toggleMenu(){
+        document.getElementById('menu-lateral').classList.toggle('active');
+        document.getElementById('menu-overlay').classList.toggle('active');
+    }
+</script>
+

@@ -10,7 +10,7 @@
             <div class="cover-content px-4">
                 <h1>Tienda de Diseño Ecom<span class="dot">.</span></h1>
                 <p>La mayor variedad para el espacio armónico en tu hogar</p>
-                <a href="/" class="btn btn-outline-dark">Comprar ahora</a>
+                <button onclick="inventarioAgotado()" class="btn btn-outline-dark">Comprar ahora</button>
                 </div>
         </div>
         <div class="area-image">
@@ -29,5 +29,12 @@
     </div>
 </div>
 </section>
+    <script>
+        function inventarioAgotado(){
+            alert('Inventario agotado!')
+        }
+    </script>
+
+
 
 {% endblock %}
